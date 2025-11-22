@@ -1,6 +1,6 @@
 async function getWeather() {
     const location = document.getElementById('location').value;
-    const apiKey = '791c4e65ea7197f580f0c6ee098cc12f';
+    const apiKey = 'weatherapikey';
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`);
     
     const data = await response.json();
@@ -21,3 +21,4 @@ async function getWeather() {
         document.getElementById('weather-result').innerHTML = '<p>Location not found.</p>';
     }
 }
+
